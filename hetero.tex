@@ -1,0 +1,662 @@
+\documentclass{beamer}
+
+\input{LatexTemplates/ici3dTemplate.tex}
+\input{LatexTemplates/ici3dCurrent.tex}
+\input{talkdir/bulletspace.tex}
+
+\usepackage{talkdir/slidecomm,talkdir/commands}
+\usepackage{graphicx,xspace}
+\usepackage{grffile}
+\usepackage{hyperref}
+\usepackage{url}
+
+\input{talkdir/section.tex}
+\input{talkdir/lengths.tex}
+
+\begin{document}
+
+
+
+\frametitle{}
+
+\newcommand{\jdtitle}{Heterogeneity, contact patterns and modeling options}
+\newcommand{\jdsub}{}
+\newcommand{\years}{2013--2020}
+
+ \date{\jddate} \title{\jdtitle} \subtitle{\jdsub} {\topBar\maketitle}
+\begin{frame}
+
+
+\frametitle{Goals}\begin{itemize}[<+-| alert@+>]
+
+\item Explain the importance of heterogeneity on patterns of disease spread\begin{itemize}[<+-| alert@+>]
+\item Focus on different types of human heterogeneity\end{itemize}
+
+\item Discuss ways in which homogeneous models fail to match observed
+	dynamics
+
+\item Use simple models to explore qualitative effects of heterogeneity on
+	modeling conclusions
+
+\item Briefly introduce some methods that are used to incorporate heterogeneity in
+	models\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{The resilience of infectious disease}
+
+\begin{columns}[c] \column{0.54\textwidth} \small
+
+1967: It's time to close the book on infectious diseases
+
+\hfill\includegraphics[width=0.6\textwidth]{my_images/smallpox.jpg}\hfill\mbox{}
+
+\column{0.4\textwidth} \small
+
+\hfill\includegraphics[width=0.6\textwidth]{my_images/headlines.jpg}\hfill\mbox{}
+
+\hfill\includegraphics[width=0.6\textwidth]{my_images/book.jpg}\hfill\mbox{}
+
+\end{columns}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Pathogen evolution}
+
+\hfill\includegraphics[width=0.4\textwidth]{my_images/influenza.jpg}\hfill\mbox{}
+
+\hfill\includegraphics[width=0.4\textwidth]{my_images/tb.jpg}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Human heterogeneity}
+
+\hfill\includegraphics[height=0.42\textheight]{my_images/maasai.jpg}\hfill\mbox{}
+
+\hfill\includegraphics[width=0.48\textwidth]{my_images/inuit.jpg}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{{Human heterogeneity}}
+
+\hfill\includegraphics[width=1\textwidth]{my_images/Lesotho_children.jpg}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{{Human heterogeneity}}
+
+\hfill\includegraphics[height=0.42\textheight]{my_images/dump_workers.jpg}\hfill\mbox{}
+
+\hfill\includegraphics[height=0.48\textheight]{my_images/bento.jpg}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+
+ \section{Homogeneous disease models}
+\begin{frame}
+
+
+\frametitle{Expanding our models}\begin{itemize}[<+-| alert@+>]
+
+\item \textbf{Homogeneous} models assume everyone has the same:\begin{itemize}[<+-| alert@+>]
+\item disease characteristics (e.g. susceptibility, tendency to
+		transmit)
+\item mixing rate
+\item probability of mixing with each person\end{itemize}
+
+\item \textbf{Heterogeneous} models allow people to be different\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{The basic reproductive number}\begin{itemize}[<+-| alert@+>]
+
+\item $\Ro$ is the number of people who would be infected by an
+	infectious individual \emph{in a fully susceptible population.}
+
+\item $\Ro = \beta/\gamma = \beta D = (cp) D$\begin{itemize}[<+-| alert@+>]
+\item $c$: Contact Rate
+\item $p$: Probability of transmission (infectivity)
+\item $D$: Average duration of infection\end{itemize}
+
+\item A disease can invade a population if and only if $\Ro>1$.\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Equilibrium}
+
+\hfill\includegraphics[height=0.9\textheight,angle=270]{SIR_model_family/comp.pdf}\hfill\mbox{}\begin{itemize}[<+-| alert@+>]
+
+\item Equilibrium is worth knowing even if the disease doesn't reach equilibrium
+
+\item System will move around the equilibrium\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Equilibrium analysis }\begin{itemize}[<+-| alert@+>]
+
+\item $\Reffec$ is the number of people who would be infected by an
+	infectious individual \emph{in a general population.}
+
+\item $\ds\Reffec =  \Ro  \frac SN = pcD \frac SN$
+
+\item At equilibrium:
+		$\ds \Reffec = \Ro  \frac SN = 1. $
+
+\item Thus:
+		$\ds \frac SN = 1/R_0.  $
+
+\item Proportion `affected' is $V = 1-S/N = 1-1/R_0$.\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Proportion affected}\begin{itemize}[<+-| alert@+>]
+
+\item Proportion `affected' is $V = 1-S/N = 1-1/R_0$.\begin{itemize}[<+-| alert@+>]
+\item * \uncover<+->{\color{blue} The same formula as the critical vaccination proportion!}
+\item * \uncover<+->{\color{blue} If this proportion is made unavailable, the disease cannot spread}
+\item * \uncover<+->{\color{blue} At least, in the homogeneous case}\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Homogeneous endemic curve}
+
+\begin{columns}[c] \column{0.54\textwidth} \small
+
+\hfill\includegraphics[width=1\textwidth]{Endemic_curves/propCurves.Rout-0.pdf}\hfill\mbox{}
+
+\column{0.4\textwidth} \small\begin{itemize}[<+-| alert@+>]
+
+\item Threshold value
+
+\item Sharp response to changes in factors underlying transmission
+
+\item Works -- sometimes
+
+\item Sometimes predicts unrealistic sensitivity\end{itemize}
+
+\end{columns}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{{Disease dynamics}}
+
+\hfill\includegraphics[height=0.9\textheight]{SIR_simulations/hiv_plot.Rout-0.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{{Homogeneous assumptions}}
+
+\hfill\includegraphics[height=0.9\textheight]{SIR_simulations/hiv_plot.Rout-1.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Homogeneous assumptions}
+
+\hfill\includegraphics[height=0.9\textheight]{SIR_simulations/hiv_plot.Rout-2.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Homogeneous assumptions}
+
+\hfill\includegraphics[height=0.9\textheight]{SIR_simulations/hiv_plot.Rout-3.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Homogeneous assumptions}
+
+\hfill\includegraphics[height=0.9\textheight]{SIR_simulations/hiv_plot.Rout-4.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Homogeneous dynamics}\begin{itemize}[<+-| alert@+>]
+
+\item For many diseases, homogeneous models tend to predict:\begin{itemize}[<+-| alert@+>]
+\item Too high of an equilibrium, when matching growth rate
+\item Too low of a growth rate, when matching equilibrium\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+
+ \section{The importance of heterogeneity}
+\begin{frame}
+
+
+\frametitle{Beyond homogeneity}\begin{itemize}[<+-| alert@+>]
+
+\item Flavors of heterogeneity\begin{itemize}[<+-| alert@+>]
+\item among hosts
+\item spatial
+\item demographic (discreteness of indviduals)
+\item temporal
+\item others\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Heterogeneity in TB}
+
+\begin{columns}[c] \column{0.54\textwidth} \small
+
+\hfill\includegraphics[width=1\textwidth]{Disease_data/tbincome.Rout.pdf}\hfill\mbox{}
+
+\column{0.4\textwidth} \small\begin{itemize}[<+-| alert@+>]
+
+\item {\bf Progression}: Nutrition, stress
+
+\item {\bf Contact}: Overcrowding, poor ventilation
+
+\item {\bf Cure}: Access to medical care\end{itemize}
+
+\end{columns}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Heterogeneity in other diseases}\begin{itemize}[<+-| alert@+>]
+
+\item {\bf STDs}: Sexual mixing patterns, access to medical care
+
+\item {\bf Influenza}: Crowding, nutrition
+
+\item {\bf Malaria}:  Attractiveness to biting insects, geographical
+	location, immune status
+
+\item {\bf Every disease!}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Large-scale heterogeneity}
+
+\hfill\includegraphics[height=0.64\textheight]{my_images/schisto.png}\hfill\mbox{}\begin{itemize}[<+-| alert@+>]
+
+\item For schistosomiasis, the worldwide average $\Ro<1$
+
+\item Disease persists because of specific populations with $\Ro>1$.
+
+\item This effect operates at many scales.\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+
+\section{Take break} 
+\begin{frame}
+ \frametitle{Take break}
+
+\hfill\includegraphics[height=0.9\textheight]{webpix/teatime.jpg}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+
+ \section{Effects of heterogeneity}
+\begin{frame}
+
+
+\frametitle{Heterogeneity among hosts}\begin{itemize}[<+-| alert@+>]
+
+\item Differences among people are pervasive, large and often correlated
+
+\item We often consider transmission probability as the product of two
+	components:\begin{itemize}[<+-| alert@+>]
+\item The "infector" has tendency to infect $\tau$
+\item The "recipient" has susceptibility $\sigma$\end{itemize}
+
+\item Then $\Ro = p c D = (\sigma \tau) c D$,
+
+\item Why do we assume this is multiplicative?\begin{itemize}[<+-| alert@+>]
+\item * \uncover<+->{\color{blue} Convenience, question this assumption}\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Equilibrium calculations}\begin{itemize}[<+-| alert@+>]
+
+\item Assume $p = \sigma\tau$ has a susceptibility component and a
+	transmission component:\begin{itemize}[<+-| alert@+>]
+\item $\Ro = \sigma\tau c D$
+\item $\Reffec = \sigma\tau c D S/N$
+\item Equilibrium $S/N = 1/\Ro$
+\item Proportion affected: $1 - 1/\Ro$\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Equilibrium calculations with heterogeneity}\begin{itemize}[<+-| alert@+>]
+
+\item $\tau D$ applies to infectious individuals $\rightarrow \tau_I
+	D_I$
+
+\item $\sigma$ applies to susceptible individuals $\rightarrow
+	\sigma_S$
+
+\item $c$ is complicated $\rightarrow c_S c_I/\bar c$\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Equilibrium calculations with heterogeneity}\begin{itemize}[<+-| alert@+>]
+
+\item $\Ro = \sigma_S\tau_I c_x D_I$
+	measured during \emph{invasion}
+
+\item $\Reffec = \sigma_S\tau_I c_x D_I S/N$
+	measured at \emph{equilibrium}
+
+\item Equilibrium $S/N \neq 1/\Ro$\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{How does $\Rx$ change?}\begin{itemize}[<+-| alert@+>]
+
+\item Imagine a disease spread by people who differ only in their
+	effective mixing rates
+
+\item If the disease has just started spreading in the population, how do
+	$c_S$ and $c_I$ compare to $\bar c$?\begin{itemize}[<+-| alert@+>]
+\item $c_S \approx \bar c$; $c_I > \bar c$.\end{itemize}
+
+\item If the disease is very widespread in the population?\begin{itemize}[<+-| alert@+>]
+\item $c_S < \bar c$; $c_I \to \bar c$.\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Simulated population}
+
+\hfill\includegraphics[width=0.8\textwidth]{SIR_model_family/simpson.Rout-0.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Early (5\% infection)}
+
+\hfill\includegraphics[width=0.8\textwidth]{SIR_model_family/simpson.Rout-1.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Mid (20\% infection)}
+
+\hfill\includegraphics[width=0.8\textwidth]{SIR_model_family/simpson.Rout-2.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Mid (50\% infection)}
+
+\hfill\includegraphics[width=0.8\textwidth]{SIR_model_family/simpson.Rout-3.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{{\sl Simulated population}}
+
+\hfill\includegraphics[width=0.8\textwidth]{SIR_model_family/simpson.Rout-0.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Simpson's paradox}
+
+\begin{minipage}{\dfwidth} \centering 
+\includegraphics[height=0.8\dfheight]{my_images/farmers.jpg} \end{minipage} \hspace{\dfsep} \begin{minipage}{\dfwidth} \centering 
+\includegraphics[height=0.8\dfheight]{my_images/senate.jpg} \end{minipage}\begin{itemize}[<+-| alert@+>]
+
+\item What happens when a peanut farmer is elected to the US Senate?
+
+\item The average IQ goes up in both places!\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{The basic reproductive number}\begin{itemize}[<+-| alert@+>]
+
+\item When the disease invades:\begin{itemize}[<+-| alert@+>]
+\item The susceptible population $\approx$ the general population
+\item The infectious population is likely to have higher values of $c$,
+		$D$ and/or $\tau$\end{itemize}
+
+\item $\Ro$ is typically greater than you would expect from a homogeneous
+	model\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Equilibrium analysis}\begin{itemize}[<+-| alert@+>]
+
+\item As disease prevalence goes up:\begin{itemize}[<+-| alert@+>]
+\item Susceptible pool is the most resistant, or least exposed group
+\item Infectious pool looks more like the general population.\end{itemize}
+
+\item $\rightarrow$ lower proportion affected \emph{for a given value of
+	\Ro.}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{{\sl Homogeneous endemic curve}}
+
+\hfill\includegraphics[height=0.9\textheight]{Endemic_curves/propCurves.Rout-0.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Heterogeneous endemic curves}
+
+\hfill\includegraphics[height=0.9\textheight]{Endemic_curves/propCurves.Rout-2.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Heterogeneous endemic curves}
+
+\hfill\includegraphics[height=0.9\textheight]{Endemic_curves/propCurves.Rout-1.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Heterogeneity and disease}
+
+\begin{columns}[c] \column{0.54\textwidth} \small\begin{itemize}[<+-| alert@+>]
+
+\item Heterogeneity has a double-edged effect\begin{itemize}[<+-| alert@+>]
+\item Effects of disease are \emph{lower} for a given value of \Ro.
+\item But \Ro\ is \emph{higher} for given mean values of factors
+		underlying transmission\end{itemize}\end{itemize}
+
+\column{0.4\textwidth} \small
+
+\hfill\includegraphics[width=1\textwidth]{Endemic_curves/propCurves.Rout-2.pdf}\hfill\mbox{}
+
+\end{columns}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Heterogeneous endemic curves}
+
+\begin{columns}[c] \column{0.54\textwidth} \small\begin{itemize}[<+-| alert@+>]
+
+\item Heterogeneity makes the endemic curve flatter
+
+\item Disease levels are more resistant to change\end{itemize}
+
+\column{0.4\textwidth} \small
+
+\hfill\includegraphics[width=1\textwidth]{Endemic_curves/propCurves.Rout-1.pdf}\hfill\mbox{}
+
+\end{columns}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{How diseases reach equilibrium }\begin{itemize}[<+-| alert@+>]
+
+\item Diseases that invade have high values of \Ro
+
+\item \Reffec\ must be 1 at equilibrium\begin{itemize}[<+-| alert@+>]
+\item Potentially infectious contacts are wasted\begin{itemize}[<+-| alert@+>]
+\item Many potential contacts are not susceptible (affected by
+			disease)
+\item Those not affected less susceptible than average\end{itemize}
+\item Infectious pool less infectious\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Spatial and network models}\begin{itemize}[<+-| alert@+>]
+
+\item Individual-level, or spatial, heterogeneity also usually
+	increases wasted contacts
+
+\item Infectious people meet:\begin{itemize}[<+-| alert@+>]
+\item people with similar social backgrounds
+\item people with similar behaviours
+\item people who are nearby geographically or in the contact network\end{itemize}
+
+\item More wasted contacts further flatten the endemic curve\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+
+ \section{Modeling approaches}
+\begin{frame}
+
+
+\frametitle{Phenomenological}
+
+\hfill\includegraphics[height=0.9\textheight]{SIR_model_family/phen.Rout.pdf}\hfill\mbox{}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\begin{columns}[c] \column{0.54\textwidth} \small
+
+\hfill\includegraphics[height=0.9\textheight]{SIR_model_family/phen.Rout.pdf}\hfill\mbox{}
+
+\column{0.4\textwidth} \small\begin{itemize}[<+-| alert@+>]
+
+\item Simply \emph{make} $\beta$ go down with prevalence, $\beta = B \times$:\begin{itemize}[<+-| alert@+>]
+\item $e^{-\alpha P}$
+\item $(1-P)^s$
+\item $(1-P/s)^{\alpha s}$\end{itemize}\end{itemize}
+
+\end{columns}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Multi-group models}\begin{itemize}[<+-| alert@+>]
+
+\item Divide the population into groups.\begin{itemize}[<+-| alert@+>]
+\item cities and villages
+\item rich and poor
+\item high and low sexual activity
+\item age, gender
+\item ...\end{itemize}
+
+\item Even if details are not correct, heterogeneity will emerge and move model in
+	the right direction\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Individual-based models}
+
+\hfill\includegraphics[width=0.8\textwidth]{my_images/network.png}\hfill\mbox{}\begin{itemize}[<+-| alert@+>]
+
+\item Allow many possibilities:\begin{itemize}[<+-| alert@+>]
+\item vary individual characteristics
+\item add a network of interactions
+\item let the network change\end{itemize}
+
+\item Individual-based approaches require stochastic models\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{{Summary}}
+
+\hfill\includegraphics[width=0.4\textwidth]{my_images/crowd.jpg}\hfill\mbox{}
+
+\begin{minipage}{\dfwidth} \centering 
+\includegraphics[height=0.8\dfheight]{Endemic_curves/propCurves.Rout-1.pdf} \end{minipage} \hspace{\dfsep} \begin{minipage}{\dfwidth} \centering 
+\includegraphics[height=0.8\dfheight]{Endemic_curves/propCurves.Rout-2.pdf} \end{minipage}
+\uncover<+->\mbox{}\end{frame}
+
+\begin{frame}
+
+
+\frametitle{Summary}
+
+\hfill\includegraphics[width=0.32\textwidth]{my_images/crowd.jpg}\hfill\mbox{}\begin{itemize}[<+-| alert@+>]
+
+\item People are heterogeneous in many ways\begin{itemize}[<+-| alert@+>]
+\item \ldots and on many scales\end{itemize}
+
+\item Simple models give us important qualitative insights\begin{itemize}[<+-| alert@+>]
+\item Diseases in heterogeneous populations are likely to be more robust to
+		change than expected from homogeneous models\end{itemize}
+
+\item More complicated models will often be necessary\begin{itemize}[<+-| alert@+>]
+\item And it may be helpful to build complexity gradually\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+\input{LatexTemplates/ici3dClose.tex}
+
+\end{document}
+

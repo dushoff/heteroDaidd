@@ -1,0 +1,27 @@
+\usetheme{default}
+
+\usepackage{times}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{
+	\vbox{
+		\hfill
+		\usebeamerfont{framenumber}\insertframenumber/\inserttotalframenumber
+		\hspace{2ex}
+	}
+	\noindent\includegraphics[width=\textwidth]{LatexTemplates/bar.pdf}
+}
+
+\newcommand{\topBar}{
+	\setbeamertemplate{headline}{
+		\includegraphics[width=\textwidth]{LatexTemplates/top.pdf}
+	}
+	\setbeamertemplate{footline}{
+	}
+}
+
+\newcommand{\sponsorBar}{
+	\setbeamertemplate{footline}{
+		\includegraphics[width=\textwidth]{LatexTemplates/newsponsors.pdf}
+	}
+}
