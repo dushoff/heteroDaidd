@@ -11,6 +11,7 @@ vim_session:
 
 ######################################################################
 
+Sources += $(wildcard *.tex)
 hetero.pdf: hetero.tex
 
 cdirs += LatexTemplates Disease_data Endemic_curves
