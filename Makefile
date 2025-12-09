@@ -50,9 +50,10 @@ Disease_data/%: | Disease_data
 	cp ../$|/$* $@
 	git add -f $@
 
-talkdir: dir=makestuff/newtalk
 talkdir:
-	$(linkdirname)
+	$(mkdir)
+	cp -r makestuff/newtalk/*.* $@
+	git add $@
 
 webpix:
 	$(mkdir)
