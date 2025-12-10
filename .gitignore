@@ -1,0 +1,10 @@
+# latex ignores
+hetero.*
+texput.log
+
+# but make sure to keep the main tex file
+!hetero.tex
+
+# makestuff ignores
+makestuff
+target.mk
