@@ -20,8 +20,8 @@
 \frametitle{}
 
 \newcommand{\jdtitle}{Heterogeneity, contact patterns and modeling options}
-\newcommand{\jdsub}{}
-\newcommand{\years}{2013--2020}
+\newcommand{\jdsub}{CarL}
+\newcommand{\years}{2013--2025}
 
  \date{\jddate} \title{\jdtitle} \subtitle{\jdsub} {\topBar\maketitle}
 \begin{frame}
@@ -29,17 +29,16 @@
 
 \frametitle{Goals}\begin{itemize}[<+-| alert@+>]
 
-\item Explain the importance of heterogeneity on patterns of disease spread\begin{itemize}[<+-| alert@+>]
-\item Focus on different types of human heterogeneity\end{itemize}
+\item Explain the importance of heterogeneity on patterns of disease spread
 
-\item Discuss ways in which homogeneous models fail to match observed
-	dynamics
+\item Identify different types of human heterogeneity
 
-\item Use simple models to explore qualitative effects of heterogeneity on
-	modeling conclusions
+\item Explain how heterogeneity on can lead to qualitative differences in modeling outcomes
 
-\item Briefly introduce some methods that are used to incorporate heterogeneity in
-	models\end{itemize}
+\item Demonstrate how homogeneous models fail to match observed dynamics
+
+\item Identify methods to incorporate heterogeneity in models
+\end{itemize}
 \uncover<+->\mbox{}\end{frame}
 
 \begin{frame}
@@ -121,7 +120,7 @@
 
 \frametitle{The basic reproductive number}\begin{itemize}[<+-| alert@+>]
 
-\item $\Ro$ is the number of people who would be infected by an
+\item $\Ro$ is the \emph{expected} number of people who would be infected by an
 	infectious individual \emph{in a fully susceptible population.}
 
 \item $\Ro = \beta/\gamma = \beta D = (cp) D$\begin{itemize}[<+-| alert@+>]
@@ -135,22 +134,10 @@
 \begin{frame}
 
 
-\frametitle{Equilibrium}
-
-\hfill\includegraphics[height=0.9\textheight,angle=270]{SIR_model_family/comp.pdf}\hfill\mbox{}\begin{itemize}[<+-| alert@+>]
-
-\item Equilibrium is worth knowing even if the disease doesn't reach equilibrium
-
-\item System will move around the equilibrium\end{itemize}
-\uncover<+->\mbox{}\end{frame}
-
-\begin{frame}
-
-
-\frametitle{Equilibrium analysis }\begin{itemize}[<+-| alert@+>]
+\frametitle{After Introduction ...}\begin{itemize}[<+-| alert@+>]
 
 \item $\Reffec$ is the number of people who would be infected by an
-	infectious individual \emph{in a general population.}
+	infectious individual \emph{under general conditions}.
 
 \item $\ds\Reffec =  \Ro  \frac SN = pcD \frac SN$
 
@@ -170,8 +157,21 @@
 
 \item Proportion `affected' is $V = 1-S/N = 1-1/R_0$.\begin{itemize}[<+-| alert@+>]
 \item * \uncover<+->{\color{blue} The same formula as the critical vaccination proportion!}
-\item * \uncover<+->{\color{blue} If this proportion is made unavailable, the disease cannot spread}
+\item * \uncover<+->{\color{blue} If at least this proportion is unavailable, prevalence tends to decline}
 \item * \uncover<+->{\color{blue} At least, in the homogeneous case}\end{itemize}\end{itemize}
+\uncover<+->\mbox{}\end{frame}
+
+
+\begin{frame}
+
+
+\frametitle{Equilibrium in the Real World}
+
+\hfill\includegraphics[height=0.9\textheight,angle=270]{SIR_model_family/comp.pdf}\hfill\mbox{}\begin{itemize}[<+-| alert@+>]
+
+\item Equilibrium is worth thinking about even if the disease doesn't reach equilibrium
+
+\item System will move around the equilibrium\end{itemize}
 \uncover<+->\mbox{}\end{frame}
 
 \begin{frame}
